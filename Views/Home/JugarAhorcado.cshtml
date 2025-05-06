@@ -1,13 +1,18 @@
-<p><input type= "text" name= "answer" placeholder= "Ingrese una letra"> <input type= "submit" value= "Enviar respuesta"></p> 
-<p><input type= "text" name= "answer" placeholder= "Ingrese una palabra"> <input type= "submit" value= "Enviar respuesta"></p>
-@ViewBag.palabra.Texto
+<form>
+<p><input type= "text" name= "letra" placeholder= "Ingrese una letra"> <input type= "submit" value= "Enviar respuesta"></p>
+</form> 
+<p><input type= "text" name= "palabra" placeholder= "Ingrese una palabra"> <input type= "submit" value= "Enviar respuesta"></p>
+@ViewBag.palabra.Texto.ToUpper()
 @for(int i = 0; i < ViewBag.palabra.Texto.Length; i++)
 {
-    if(true)
+    if(ViewBag.letraInput != null || ViewBag.palabraInput != null)
     {
-
+        if(ViewBag.palabra.Cadena[i] == ViewBag.letraInput)
+    {
+        @ViewBag.letraInput.ToString().ToUpper()
     }
     else{
         @:_
+    }
     }
 }

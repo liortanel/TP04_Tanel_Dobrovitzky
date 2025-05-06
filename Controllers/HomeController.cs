@@ -17,8 +17,10 @@ public class HomeController : Controller
     {
         return View();
     }
-    public IActionResult JugarAhorcado()
+    public IActionResult JugarAhorcado(char letra, string palabra)
     {
+        ViewBag.letraInput = letra;
+        ViewBag.palabraInput = palabra;
         ViewBag.palabra = CrearPalabra.GenerarPalabra();
         return View();
     }

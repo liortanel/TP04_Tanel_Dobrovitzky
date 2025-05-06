@@ -4,12 +4,17 @@ public class CrearPalabra
 
     public static Palabra GenerarPalabra()
     {
-        Random rnd = new Random();
+        Random rnd = new Random(); List<char> cadena = new List<char>();
         List<string> palabras = new List<string>(){
-        "MESA",
-        "SILLA",
+        "mesa",
+        "silla",
         };
-        Palabra palabra = new Palabra(palabras[rnd.Next(palabras.Count)]);
+        string texto = palabras[rnd.Next(palabras.Count)];
+        foreach(char caracter in texto)
+        {
+            cadena.Add(caracter);
+        }
+        Palabra palabra = new Palabra(texto, cadena);
         return palabra;
     }
 }
