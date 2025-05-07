@@ -1,18 +1,8 @@
-<form>
-<p><input type= "text" name= "letra" placeholder= "Ingrese una letra"> <input type= "submit" value= "Enviar respuesta"></p>
+<form action='@Url.Action("CompararCaracter", "Home")' method="POST" enctype="multipart/form-data">
+<p><input type= "text" name= "letra" placeholder= "Ingrese una letra"> 
+<input type= "submit" value= "Enviar respuesta"></p>
 </form> 
+<form>
 <p><input type= "text" name= "palabra" placeholder= "Ingrese una palabra"> <input type= "submit" value= "Enviar respuesta"></p>
-@ViewBag.palabra.Texto.ToUpper()
-@for(int i = 0; i < ViewBag.palabra.Texto.Length; i++)
-{
-    if(ViewBag.letraInput != null || ViewBag.palabraInput != null)
-    {
-        if(ViewBag.palabra.Cadena[i] == ViewBag.letraInput)
-    {
-        @ViewBag.letraInput.ToString().ToUpper()
-    }
-    else{
-        @:_
-    }
-    }
-}
+</form> 
+@ViewBag.palabraParcial
