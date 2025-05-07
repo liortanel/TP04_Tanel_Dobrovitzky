@@ -23,10 +23,16 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult CompararCaracter(string caracter, string texto)
+    public IActionResult ArriesgarLetra(char caracter)
     {
-        Palabra palabra = new Palabra(texto);
-        ViewBag.palabraParcial = LogicaAhorcado.CompararCaracter(caracter, palabra);
+        ViewBag.palabra = LogicaAhorcado.palabra;
+        ViewBag.letra = caracter;
+        return View("JugarAhorcado");
+    }
+        public IActionResult ArriesgarPalabra(string texto)
+    {
+        ViewBag.palabra = LogicaAhorcado.palabra;
+        ViewBag.palabraFinal = texto;
         return View("JugarAhorcado");
     }
     

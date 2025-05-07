@@ -1,8 +1,19 @@
-<form action='@Url.Action("CompararCaracter", "Home")' method="POST" enctype="multipart/form-data">
-<p><input type= "text" name= "letra" placeholder= "Ingrese una letra"> 
+@foreach(char caracter in ViewBag.palabra)
+{
+  if(caracter == ViewBag.letra)
+    {
+        @ViewBag.letra
+    }
+    else
+    {
+        @:_
+    } 
+}
+<form action='@Url.Action("ArriesgarLetra", "Home")' method="POST" enctype="multipart/form-data">
+<p><input type= "text" name= "caracter" placeholder= "Ingrese una letra">
 <input type= "submit" value= "Enviar respuesta"></p>
 </form> 
-<form>
-<p><input type= "text" name= "palabra" placeholder= "Ingrese una palabra"> <input type= "submit" value= "Enviar respuesta"></p>
+
+<form action='@Url.Action("ArriesgarPalabra", "Home")' method="POST" enctype="multipart/form-data">
+<p><input type= "text" name= "texto" placeholder= "Ingrese una palabra"> <input type= "submit" value= "Enviar respuesta"></p>    
 </form> 
-@ViewBag.palabraParcial

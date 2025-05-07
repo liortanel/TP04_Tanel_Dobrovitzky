@@ -1,8 +1,8 @@
 public class LogicaAhorcado
 {
-    public static Palabra palabra {get; private set;} = GenerarPalabra();
+    public static string palabra {get; private set;} = GenerarPalabra();
 
-    public static Palabra GenerarPalabra()
+    public static string GenerarPalabra()
     {
         Random rnd = new Random();
         List<string> palabras = new List<string>(){
@@ -10,20 +10,19 @@ public class LogicaAhorcado
         "silla",
         };
         string texto = palabras[rnd.Next(palabras.Count)];
-        Palabra palabra = new Palabra(texto);
-        return palabra;
+        return texto;
     }
 
-    public static string CompararCaracter(string caracter, Palabra palabra)
+    public static string ArriesgarLetra(string caracter)
     {
         string palabraFinal = "";
-        if(palabra.Texto != null)
+        if(palabra != "")
         {
-            for(int i = 0; i < palabra.Texto.Length; i++)
+            for(int i = 0; i < palabra.Length; i++)
         {
-            if(caracter != null && palabra != null)
+            if(caracter != "")
             {
-                if(palabra.Texto.Contains(caracter))
+                if(palabra.Contains(caracter))
                 {
                     palabraFinal += caracter;
                 }
@@ -35,5 +34,20 @@ public class LogicaAhorcado
         }
         }
         return palabraFinal; 
+    }
+    public static bool ArriesgarPalabra(string texto)
+    {
+        bool adivino = false;
+        if(palabra != "")
+        {
+            if(texto != "")
+            {
+                if(palabra.Contains(texto))
+                {
+                    adivino = true;
+                }
+            }
+        }
+        return adivino; 
     }
 }
