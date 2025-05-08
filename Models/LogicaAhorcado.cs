@@ -13,27 +13,27 @@ public class LogicaAhorcado
         return texto;
     }
 
-    public static string ArriesgarLetra(string caracter)
+    public static string ArriesgarLetra(string caracter) 
     {
-        string palabraFinal = "";
+        string palabraParcial = "";
         if(palabra != "")
         {
             for(int i = 0; i < palabra.Length; i++)
-        {
-            if(caracter != "")
             {
-                if(palabra.Contains(caracter))
+                if(caracter != "")
                 {
-                    palabraFinal += caracter;
-                }
-                else
-                {
-                    palabraFinal += "_";
+                    if(palabra[i].ToString().Contains(caracter))
+                    {
+                        palabraParcial += caracter + " ";
+                    }
+                    else
+                    {
+                        palabraParcial += "_ ";
+                    }
                 }
             }
         }
-        }
-        return palabraFinal; 
+        return palabraParcial; 
     }
     public static bool ArriesgarPalabra(string texto)
     {

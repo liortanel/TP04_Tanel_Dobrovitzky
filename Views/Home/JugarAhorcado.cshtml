@@ -1,16 +1,6 @@
-@foreach(char caracter in ViewBag.palabra)
-{
-  if(caracter == ViewBag.letra)
-    {
-        @ViewBag.letra
-    }
-    else
-    {
-        @:_
-    } 
-}
 <form action='@Url.Action("ArriesgarLetra", "Home")' method="POST" enctype="multipart/form-data">
 <p><input type= "text" name= "caracter" placeholder= "Ingrese una letra">
+@ViewBag.palabraParcial @ViewBag.letra
 <input type= "submit" value= "Enviar respuesta"></p>
 </form> 
 

@@ -19,14 +19,14 @@ public class HomeController : Controller
     }
     public IActionResult JugarAhorcado()
     {
-        ViewBag.palabra = LogicaAhorcado.GenerarPalabra();
+        ViewBag.palabra = LogicaAhorcado.palabra;
         return View();
     }
 
-    public IActionResult ArriesgarLetra(char caracter)
+    public IActionResult ArriesgarLetra(string caracter)
     {
         ViewBag.palabra = LogicaAhorcado.palabra;
-        ViewBag.letra = caracter;
+        ViewBag.letra = LogicaAhorcado.ArriesgarLetra(caracter);
         return View("JugarAhorcado");
     }
         public IActionResult ArriesgarPalabra(string texto)
