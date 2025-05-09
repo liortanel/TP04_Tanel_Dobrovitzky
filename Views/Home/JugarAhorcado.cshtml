@@ -1,8 +1,8 @@
 <form action='@Url.Action("ArriesgarLetra", "Home")' method="POST" enctype="multipart/form-data">
 <p><input type= "text" name= "caracter" placeholder= "Ingrese una letra">
-@ViewBag.palabraParcial @ViewBag.letra
 <input type= "submit" value= "Enviar respuesta"></p>
 </form> 
+@ViewBag.palabra @ViewBag.palabraFinal
 
 <form action='@Url.Action("ArriesgarPalabra", "Home")' method="POST" enctype="multipart/form-data">
 <p><input type= "text" name= "texto" placeholder= "Ingrese una palabra"> <input type= "submit" value= "Enviar respuesta"></p>    

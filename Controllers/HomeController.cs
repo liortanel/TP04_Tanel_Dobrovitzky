@@ -17,16 +17,17 @@ public class HomeController : Controller
     {
         return View();
     }
-    public IActionResult JugarAhorcado()
+    public IActionResult JugarAhorcado(char caracter)
     {
         ViewBag.palabra = LogicaAhorcado.palabra;
+        ViewBag.palabraFinal = LogicaAhorcado.ArriesgarLetra(caracter);
         return View();
     }
 
-    public IActionResult ArriesgarLetra(string caracter)
+    public IActionResult ArriesgarLetra(char caracter)
     {
         ViewBag.palabra = LogicaAhorcado.palabra;
-        ViewBag.letra = LogicaAhorcado.ArriesgarLetra(caracter);
+        ViewBag.palabraFinal = LogicaAhorcado.ArriesgarLetra(caracter);
         return View("JugarAhorcado");
     }
         public IActionResult ArriesgarPalabra(string texto)
