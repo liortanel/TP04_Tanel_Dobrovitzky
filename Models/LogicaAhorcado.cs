@@ -2,6 +2,7 @@ public class LogicaAhorcado
 {
     public static string palabra { get; private set; } = GenerarPalabra();
     public static string palabraFinal { get; private set; }
+    public static char[] palabraFinalChar {get; private set;}
 
     public static string GenerarPalabra()
     {
@@ -13,26 +14,23 @@ public class LogicaAhorcado
         string texto = palabras[rnd.Next(palabras.Count)];
         return texto;
     }
-    public static void InicializarJuego()
-    {
-        palabraFinal = "";
-    }
-
+    public static void InicializarJuego() 
+{
+    palabraFinalChar = Enumerable.Repeat('_', palabra.Length).ToArray();
+    Console.WriteLine(new string(palabraFinalChar)); 
+}
     public static string ArriesgarLetra(char caracter)
+{
+    for (int i = 0; i < palabra.Length; i++)
     {
-        for(int i = 0; i < palabra.Length; i++)
+        if (palabra[i] == caracter)
         {
-            if (palabra[i] == caracter)
-            {
-                palabraFinal += caracter + " ";
-            }
-            else
-            {
-                palabraFinal += "_ ";
-            }
+            palabraFinalChar[i] = caracter;
         }
-        return palabraFinal;
     }
+    palabraFinal = new string(palabraFinalChar);
+    return palabraFinal;
+}
     public static bool ArriesgarPalabra(string texto)
     {
         bool adivino = false;
