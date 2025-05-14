@@ -17,12 +17,13 @@ public class HomeController : Controller
     {
         return View();
     }
-    public IActionResult JugarAhorcado()
+    public IActionResult JugarAhorcado(string texto)
     {
         LogicaAhorcado.InicializarJuego();
         ViewBag.palabra = LogicaAhorcado.palabra;
         ViewBag.palabraFinal = new string(LogicaAhorcado.palabraFinalChar);
         ViewBag.palabraFinalChar = LogicaAhorcado.palabraFinalChar;
+        ViewBag.arriesgadas = LogicaAhorcado.arriesgadas;
 
         return View();
     }
@@ -30,20 +31,41 @@ public class HomeController : Controller
     public IActionResult ArriesgarLetra(char caracter)
     {
         LogicaAhorcado.ArriesgarLetra(caracter);
-        ViewBag.palabra = LogicaAhorcado.palabra;
-        ViewBag.palabraFinal = new string(LogicaAhorcado.palabraFinalChar);
+        string Palabra = LogicaAhorcado.palabra;
+        string PalabraFinal = new String(LogicaAhorcado.palabraFinalChar);
+        ViewBag.palabra = Palabra;
+        ViewBag.palabraFinal = PalabraFinal;
         ViewBag.palabraFinalChar = LogicaAhorcado.palabraFinalChar;
+        ViewBag.arriesgadas = LogicaAhorcado.arriesgadas;
+        System.Console.WriteLine(PalabraFinal);
+        if(PalabraFinal == Palabra)
+        {
+        return RedirectToAction("Gano");
+        }       
 
         return View("JugarAhorcado");
     }
 
     public IActionResult ArriesgarPalabra(string texto)
     {
-        ViewBag.Adivino = LogicaAhorcado.ArriesgarPalabra(texto);
-        ViewBag.palabraFinal = texto;
+        bool adivino = LogicaAhorcado.ArriesgarPalabra(texto);
+        ViewBag.Adivino = adivino;
         ViewBag.palabra = LogicaAhorcado.palabra;
-
-        return View("JugarAhorcado");
+        if (adivino)
+        {
+            ViewBag.palabraFinal = texto;
+            return RedirectToAction("Gano");
+        }
+        else
+        {
+            ViewBag.palabraFinal = LogicaAhorcado.palabraFinalChar;
+            ViewBag.Adivino = false;
+            return View("JugarAhorcado");
+        }
+    }
+    public IActionResult Gano()
+    {
+        return View();
     }
 
 }

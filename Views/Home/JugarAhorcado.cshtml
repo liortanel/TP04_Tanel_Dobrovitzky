@@ -1,10 +1,18 @@
 <form action='@Url.Action("ArriesgarLetra", "Home")' method="POST" enctype="multipart/form-data">
 <p><input type= "text" name= "caracter" placeholder= "Ingrese una letra">
 <input type= "submit" value= "Enviar respuesta"></p>
-@ViewBag.palabra @ViewBag.palabraFinal
 </form> 
-
 <form action='@Url.Action("ArriesgarPalabra", "Home")' method="POST" enctype="multipart/form-data">
 <p><input type= "text" name= "texto" placeholder= "Ingrese una palabra"> <input type= "submit" value= "Enviar respuesta"></p>    
-@ViewBag.palabra @ViewBag.palabraFinal
+<h1>
+</h1>
 </form> 
+@foreach(char letra in ViewBag.palabraFinal)
+{
+    <h1 style="display: inline; margin-right:5px;">@letra</h1>
+}
+@foreach(char letra in ViewBag.arriesgadas)
+{
+    <h1 style="display: inline; margin-right:5px;">@letra</h1>
+}
+
