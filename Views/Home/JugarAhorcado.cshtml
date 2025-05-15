@@ -1,3 +1,4 @@
+<h1><a href=index>Ahorcado</a></h1>
 <form action='@Url.Action("ArriesgarLetra", "Home")' method="POST" enctype="multipart/form-data">
 <p><input type= "text" name= "caracter" placeholder= "Ingrese una letra">
 <input type= "submit" value= "Enviar respuesta"></p>
@@ -7,12 +8,17 @@
 <h1>
 </h1>
 </form> 
+<div>
 @foreach(char letra in ViewBag.palabraFinal)
 {
-    <h1 style="display: inline; margin-right:5px;">@letra</h1>
+    <h1 style="display: inline; margin-right:5px;">@letra.ToString().ToUpper()</h1>
 }
+</div>
+<br><br>
+<div>
 @foreach(char letra in ViewBag.arriesgadas)
 {
-    <h1 style="display: inline; margin-right:5px;">@letra</h1>
+    <h1 style="display: inline; margin-right:5px;">@letra.ToString().ToUpper() -</h1>
 }
-
+</div>
+<pre>@ViewBag.dibujo</pre> <!-- ChatGPT -->

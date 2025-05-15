@@ -17,14 +17,14 @@ public class HomeController : Controller
     {
         return View();
     }
-    public IActionResult JugarAhorcado(string texto)
+    public IActionResult JugarAhorcado()
     {
         LogicaAhorcado.InicializarJuego();
         ViewBag.palabra = LogicaAhorcado.palabra;
         ViewBag.palabraFinal = new string(LogicaAhorcado.palabraFinalChar);
         ViewBag.palabraFinalChar = LogicaAhorcado.palabraFinalChar;
         ViewBag.arriesgadas = LogicaAhorcado.arriesgadas;
-
+        ViewBag.dibujo = LogicaAhorcado.DibujarAhorcado(LogicaAhorcado.intentosFallidos);
         return View();
     }
 
@@ -37,10 +37,15 @@ public class HomeController : Controller
         ViewBag.palabraFinal = PalabraFinal;
         ViewBag.palabraFinalChar = LogicaAhorcado.palabraFinalChar;
         ViewBag.arriesgadas = LogicaAhorcado.arriesgadas;
-        System.Console.WriteLine(PalabraFinal);
+        ViewBag.intentosFallidos = LogicaAhorcado.intentosFallidos;
+        ViewBag.dibujo = LogicaAhorcado.DibujarAhorcado(LogicaAhorcado.intentosFallidos);
         if(PalabraFinal == Palabra)
         {
         return RedirectToAction("Gano");
+        }
+        if(LogicaAhorcado.intentosFallidos == 6)
+        {
+        return RedirectToAction("Perdio");
         }       
 
         return View("JugarAhorcado");
@@ -51,6 +56,7 @@ public class HomeController : Controller
         bool adivino = LogicaAhorcado.ArriesgarPalabra(texto);
         ViewBag.Adivino = adivino;
         ViewBag.palabra = LogicaAhorcado.palabra;
+        ViewBag.arriesgadas = LogicaAhorcado.arriesgadas;
         if (adivino)
         {
             ViewBag.palabraFinal = texto;
@@ -60,11 +66,17 @@ public class HomeController : Controller
         {
             ViewBag.palabraFinal = LogicaAhorcado.palabraFinalChar;
             ViewBag.Adivino = false;
-            return View("JugarAhorcado");
+            return RedirectToAction("Perdio");
         }
     }
     public IActionResult Gano()
     {
+        return View();
+    }
+    public IActionResult Perdio()
+    {
+        ViewBag.palabra = LogicaAhorcado.palabra;
+        ViewBag.dibujo = LogicaAhorcado.DibujarAhorcado(LogicaAhorcado.intentosFallidos);
         return View();
     }
 
