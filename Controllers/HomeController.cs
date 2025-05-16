@@ -79,5 +79,9 @@ public class HomeController : Controller
         ViewBag.dibujo = LogicaAhorcado.DibujarAhorcado(LogicaAhorcado.intentosFallidos);
         return View();
     }
+    public IActionResult Reglas()
+    {
+        return View();
+    }
 
 }
