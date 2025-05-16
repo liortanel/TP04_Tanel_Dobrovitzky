@@ -1,25 +1,23 @@
 *{
   background-color: #efede4;
+  font-size: xx-large;
 }
 
 html {
-  font-size: 14px;
   min-height: 100%;
 }
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+section h1{
+  text-decoration: underline;
 }
-
 h1{
   color: rgb(163, 125, 76);
+  font-family: Arial, Helvetica, sans-serif;
 }
 h1, p, div, pre{
   text-align: center;
 }
 input{
+  
   border: 2px solid rgb(216, 173, 118);
 }
 input[type="submit"], input[type="button"]{
@@ -36,4 +34,20 @@ body {
 footer {
   margin-top: 10px;
   padding: 10px;
+  clear: both;
+}
+li{
+  list-style: none;
+
+  width: 45%;
+}
+
+.reglas{
+  float: right;
+  margin-top: -27%;
+  margin-right: 2%;
+}
+.victoria{
+  margin-left: 25%;
+  margin-bottom: 2%;
 }
