@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2ks+go/pXOkqYM0mo8BDcYwdiNyGAZ+TrQcdvx7KaDw=",
+  "Hash": "aofFUKHsWT4yxj6wd5WBTUblfqMGFREbZQofDaZpzsg=",
   "Source": "TP04_Tanel_Dobrovitzky",
   "BasePath": "_content/TP04_Tanel_Dobrovitzky",
   "Mode": "Default",
@@ -34,25 +34,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
-    },
-    {
-      "Identity": "C:\\Users\\49123993\\TP04_Tanel_Dobrovitzky\\wwwroot\\css\\victoria.gif",
-      "SourceId": "TP04_Tanel_Dobrovitzky",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49123993\\TP04_Tanel_Dobrovitzky\\wwwroot\\",
-      "BasePath": "_content/TP04_Tanel_Dobrovitzky",
-      "RelativePath": "css/victoria.gif",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\victoria.gif"
     },
     {
       "Identity": "C:\\Users\\49123993\\TP04_Tanel_Dobrovitzky\\wwwroot\\favicon.ico",
@@ -91,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\reglas.gif"
+    },
+    {
+      "Identity": "C:\\Users\\49123993\\TP04_Tanel_Dobrovitzky\\wwwroot\\img\\victoria.gif",
+      "SourceId": "TP04_Tanel_Dobrovitzky",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\49123993\\TP04_Tanel_Dobrovitzky\\wwwroot\\",
+      "BasePath": "_content/TP04_Tanel_Dobrovitzky",
+      "RelativePath": "img/victoria.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\victoria.gif"
     },
     {
       "Identity": "C:\\Users\\49123993\\TP04_Tanel_Dobrovitzky\\wwwroot\\js\\site.js",

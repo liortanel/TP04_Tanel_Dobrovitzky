@@ -1,6 +1,7 @@
 *{
   background-color: #efede4;
   font-size: xx-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 html {
@@ -11,17 +12,31 @@ section h1{
 }
 h1{
   color: rgb(163, 125, 76);
-  font-family: Arial, Helvetica, sans-serif;
 }
 h1, p, div, pre{
   text-align: center;
 }
 input{
-  
   border: 2px solid rgb(216, 173, 118);
 }
+
+input[type="text"] {  
+  padding: 10px;
+  margin: 8px 0;
+  border: 2px solid rgb(216, 173, 118);
+  border-radius: 5px;
+
+}
+
 input[type="submit"], input[type="button"]{
   cursor:pointer;
+  padding: 8px 16px;
+  margin: 5px;
+  background-color: rgb(216, 173, 118);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 a{
   text-decoration: none;
@@ -44,10 +59,11 @@ li{
 
 .reglas{
   float: right;
-  margin-top: -27%;
+  margin-top: -29%;
   margin-right: 2%;
 }
 .victoria{
   margin-left: 25%;
   margin-bottom: 2%;
 }
+
