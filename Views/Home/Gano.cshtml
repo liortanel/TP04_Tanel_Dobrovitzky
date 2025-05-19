@@ -1,6 +1,15 @@
 <h1>Ganaste!</h1>
+@if(ViewBag.intentosFallidos == 1)
+{
+    <h1>Tuviste un intento fallido</h1>
+}
+else{
+    <h1>Tuviste @ViewBag.intentosFallidos intentos fallidos</h1>
+}
+
 <img class="victoria" src="/img/victoria.gif" alt="victoria" width="50%" height="480px">
 <p><a href= '@Url.Action("JugarAhorcado", "Home")'> <input type = "button" value = "Volver a jugar"></a></p>
+
 
 
 

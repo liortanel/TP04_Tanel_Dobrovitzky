@@ -71,6 +71,7 @@ public class HomeController : Controller
     }
     public IActionResult Gano()
     {
+        ViewBag.intentosFallidos = LogicaAhorcado.intentosFallidos;
         return View();
     }
     public IActionResult Perdio()
