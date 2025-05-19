@@ -38,7 +38,7 @@ public class LogicaAhorcado
         bool encontrada = false;
         for (int i = 0; i < palabra.Length; i++)
         {
-            if (palabra[i] == caracter)
+            if (palabra[i] == caracter || char.ToUpper(palabra[i]) == caracter)
             {
                 encontrada = true;
                 palabraFinalChar[i] = caracter;
@@ -46,7 +46,7 @@ public class LogicaAhorcado
         }
         if (!encontrada)
         {
-            if (!arriesgadas.Contains(caracter))
+            if (!arriesgadas.Contains(char.ToLower(caracter)) && !arriesgadas.Contains(char.ToUpper(caracter)))
             {
                 arriesgadas.Add(caracter);
                 intentosFallidos++;
