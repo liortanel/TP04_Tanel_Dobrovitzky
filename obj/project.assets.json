@@ -8,24 +8,26 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\49123993\\.nuget\\packages\\": {}
+    "C:\\Users\\usuario\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\49123993\\TP04_Tanel_Dobrovitzky\\TP04_Tanel_Dobrovitzky.csproj",
+      "projectUniqueName": "C:\\Users\\usuario\\TP04_Tanel_Dobrovitzky\\TP04_Tanel_Dobrovitzky.csproj",
       "projectName": "TP04_Tanel_Dobrovitzky",
-      "projectPath": "C:\\Users\\49123993\\TP04_Tanel_Dobrovitzky\\TP04_Tanel_Dobrovitzky.csproj",
-      "packagesPath": "C:\\Users\\49123993\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\49123993\\TP04_Tanel_Dobrovitzky\\obj\\",
+      "projectPath": "C:\\Users\\usuario\\TP04_Tanel_Dobrovitzky\\TP04_Tanel_Dobrovitzky.csproj",
+      "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\usuario\\TP04_Tanel_Dobrovitzky\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\49123993\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

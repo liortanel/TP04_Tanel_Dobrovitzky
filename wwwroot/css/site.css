@@ -59,11 +59,14 @@ li{
 
 .reglas{
   float: right;
-  margin-top: -29%;
+  margin-top: -34%;
   margin-right: 2%;
 }
 .victoria{
   margin-left: 25%;
   margin-bottom: 2%;
+}
+li, strong{
+  font-size:x-large
 }
 
